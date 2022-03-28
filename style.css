@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@300;400;500;600;700;800&display=swap');
+@import url('./player.css');
 *{
     font-family: 'M PLUS 1', sans-serif;
     margin: 0;
@@ -18,20 +19,19 @@ body{
 
 .song-container{
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
 
-    width: 690px;
+    width: 750px;
     padding: 20px;
     border-radius: 10px;
-    border: 2px solid rgba(0,0,0,0.1);
+    border: 1.5px solid rgba(0,0,0,0.05);
 }
 
 .song-container .song {
     width: 120px;
     height: 170px;
-    /* background: springgreen; */
-    border: 1px solid rgba(0,0,0,0.1);
     border-radius: 10px;
 
     display: flex;
@@ -39,7 +39,7 @@ body{
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-
+    
 }
 
 .song-container .song .song-img{
@@ -56,20 +56,28 @@ body{
 
 .song-container .song .song-img .play-button{
     position: absolute;
+    cursor: pointer;
     bottom: 10px;
     right: 10px;
     width: 30px;
     height: 30px;
     border-radius: 10px;
+    color: rgb(16, 104, 206);
     background: #fff;
     
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 .song-container .song .song-img .play-button i{
     font-size: 0.8rem;
-    color: rgb(16, 104, 206);
+}
+
+.song-container .song:hover .song-img .play-button{
+    background-color: rgba(16, 104, 206,1);
+    color: #fff;
 }
 
 .song-container .song .song-img img{
