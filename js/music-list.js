@@ -5,7 +5,6 @@ let allMusic = [
       artist: "Niall Horan",
       img: "./img/This_Town.jpg",
       src: "This Town",
-      bg: "#424242",
     },
     {
       id: 2,
@@ -13,7 +12,6 @@ let allMusic = [
       artist: "Dhanwin KB",
       img: "./img/Jupiter_Mazha.jpg",
       src: "Jupiter Mazha",
-      bg: "#242349",
     },
     {
       id: 3,
@@ -21,7 +19,6 @@ let allMusic = [
       artist: "Gautham Menon",
       img: "./img/Thooriga.jpg",
       src: "Thooriga",
-      bg: "#C16F73",
     },
     {
       id: 4,
@@ -29,7 +26,6 @@ let allMusic = [
       artist: "Nikhil Mathew",
       img: "./img/Azhalinte.jpg",
       src: "Azhalinte",
-      bg: "#3f51b5",
     },
     {
       id: 5,
@@ -37,7 +33,6 @@ let allMusic = [
       artist: "One Direction",
       img: "./img/Night_Changes.jpg",
       src: "Night Changes",
-      bg: "#333333",
     },
     {
       id: 6,
@@ -45,7 +40,6 @@ let allMusic = [
       artist: "Arijit Singh",
       img: "./img/Arijit_Singh.jpg",
       src: "Samjhawan",
-      bg: "#c62828",
     },
     {
       id: 7,
@@ -53,7 +47,6 @@ let allMusic = [
       artist: "Arijit Singh",
       img: "./img/Arijit_Singh.jpg",
       src: "Soch Na Sake",
-      bg: "#c62828",
     },
     {
       id: 8,
@@ -61,7 +54,6 @@ let allMusic = [
       artist: "Glass Animals",
       img: "./img/Glass_Animals.jpg",
       src: "Heat Waves",
-      bg: "#e91e63",
     },
     {
       id: 9,
@@ -69,7 +61,6 @@ let allMusic = [
       artist: "Harris Jayaraj",
       img: "./img/Adiyae_Kolluthey.jpg",
       src: "Adiyae Kolluthey",
-      bg: "#b71c1c",
       },
     {
       id: 10,
@@ -77,7 +68,6 @@ let allMusic = [
       artist: "Powfu",
       img: "./img/death_bed.jpg",
       src: "death bed",
-      bg: "#283593",
     },
     {
       id: 11,
@@ -85,7 +75,6 @@ let allMusic = [
       artist: "Pradeep Kumar",
       img: "./img/Nee_Kavithaigala.jpg",
       src: "Nee Kavithaigala",
-      bg: "#134605",
     },
     {
       id: 12,
@@ -93,7 +82,6 @@ let allMusic = [
       artist: "Minnal Murali",
       img: "./img/Uyire.jpg",
       src: "Uyire",
-      bg: "#1a237e",
     },
     {
       id: 13,
@@ -101,7 +89,6 @@ let allMusic = [
       artist: "Pink Sweats",
       img: "./img/At_My_Worst.jpg",
       src: "At My Worst",
-      bg: "#d81b60",
     },
     {
       id: 14,
@@ -109,7 +96,6 @@ let allMusic = [
       artist: "Ruth B",
       img: "./img/Dandelions.jpg",
       src: "Dandelions",
-      bg: "#455a64",
     },
     {
       id: 15,
@@ -117,7 +103,6 @@ let allMusic = [
       artist: "Sid Sriram",
       img: "./img/mudhal_nee_mudivum_nee.jpg",
       src: "mudhal nee mudivum nee",
-      bg: "#795548",
     },
     {
       id: 16,
@@ -125,7 +110,6 @@ let allMusic = [
       artist: "Arijit Singh",
       img: "./img/oru_nokk.jpg",
       src: "oru nokk",
-      bg: "#0277bd",
     },
     {
       id: 17,
@@ -133,7 +117,6 @@ let allMusic = [
       artist: "Hollow Coves",
       img: "./img/Hollow_Coves.jpg",
       src: "Coastline",
-      bg: "#8d6e63",
     },
     {
       id: 18,
@@ -141,7 +124,6 @@ let allMusic = [
       artist: "Havoc Brothers",
       img: "./img/somberi.jpg",
       src: "somberi",
-      bg: "#BDC109",
     },
     {
       id: 19,
@@ -149,7 +131,6 @@ let allMusic = [
       artist: "Thaikkudam Bridge",
       img: "./img/Abhi_Mujh_Mein.jpg",
       src: "Abhi Mujh Mein",
-      bg: "#3D505C",
       },
     {
       id: 20,
@@ -157,7 +138,6 @@ let allMusic = [
       artist: "Banners",
       img: "./img/someone_to_you.jpg",
       src: "someone to you",
-      bg: "#ef6c00",
     },
     {
       id: 21,
@@ -165,7 +145,6 @@ let allMusic = [
       artist: "Ed Sheeran",
       img: "./img/shivers.jpg",
       src: "shivers",
-      bg: "#f44336",
     },
 
   ];

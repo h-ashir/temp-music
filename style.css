@@ -1,22 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lovers+Quarrel&display=swap');
+@import url('./song-container.css');
 @import url('./player.css');
-*{
-    font-family: 'Nunito Sans', sans-serif;
-    margin: 0;
+*{ 
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-}
-
-body{
-    min-height: 100vh;
-    overflow: hidden;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 150px;
 }
 
 ::-webkit-scrollbar {
@@ -25,90 +15,115 @@ body{
     background-color: transparent;
 }
 
-.song-container{
+body{
+    --bg : #1c2a34;
+    --primary : #44aef1;
+    --primary-60 : #46b0f199;
+    --secondary : #76716e;
+    --secondary-60 : #77726e99;
+    min-height: 100vh;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 15px;
-
-    width: 750px;
-    max-height: 520px;
-    overflow-y: scroll;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1.5px solid rgba(0,0,0,0.05);
-}
-
-.song-container .song {
-    width: 120px;
-    height: 170px;
-    border-radius: 10px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-    
-}
-
-.song-container .song .song-img{
-    position: relative;
-    width: 100px;
-    height: 100px;
-    border-radius: 20px;
+    flex-direction: row;
     overflow: hidden;
-    
+    background: var(--bg);
+    font-family: 'Nunito Sans', sans-serif;
+}
+.left{
+    flex: 2;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+.left .lc{
+    width: 80%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.left .l-title{
+    color: #dedede;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+    opacity: 0.6;
+    padding-bottom: 5px;
+}
+.left .lc .l-item{
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 0;
+    padding-left: 5px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 10px;
+    color: var(--secondary-60);
+    transition: all 0.3s ease;
 }
-
-.song-container .song .song-img .play-button{
+.left .lc .l-item:hover{
+    color: var(--primary-60);    
+}
+.left .lc .l-item.l-active{
+    position: relative;
+    color: var(--primary);    
+}
+.left .lc .l-item.l-active::after{
     position: absolute;
-    cursor: pointer;
-    bottom: 10px;
-    right: 10px;
+    right: 0;
+    content: '';
+    height: 100%;
+    width: 5px;
+    border-radius: 5px;
+    background-color: var(--primary);    
+
+}
+.left .lc .l-item .text{
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+.left .logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.left .logo .image{
     width: 30px;
     height: 30px;
-    border-radius: 10px;
-    color: rgb(16, 104, 206);
-    background: #fff;
-    
+    border-radius: 50%;
+    background: var(--primary);
+    overflow: hidden;
+}
+.left .logo .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.left .logo .text{
+    font-weight: 500;
+    font-size: 3rem;
+    color: var(--primary);
+    font-family: 'Lovers Quarrel', cursive !important;
+}
+.left .logo .text span:nth-child(2){
+    color: var(--secondary);
+}
+.mid{
+    flex: 6;
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    transition: background-color 0.3s ease, color 0.3s ease;
+    gap: 150px;
 }
-.song-container .song .song-img .play-button i{
-    font-size: 0.8rem;
+.right{
+    flex: 2.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.song-container .song:hover .song-img .play-button{
-    background-color: rgba(16, 104, 206,1);
-    color: #fff;
-}
-
-.song-container .song .song-img img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.song-container .song .song-name{
-    width: 100px;
-    font-size: 12px;
-    font-weight: 700;
-}
-.song-container .song .song-artist{
-    width: 100px;
-    font-size: 9px;
-    font-weight: 600;
-    color: rgb(53, 53, 53);
-    margin-top: -8px;
-}
-
 
 @media (max-width: 500px){
     *{
@@ -117,29 +132,65 @@ body{
         -webkit-user-select: none;
     }
     body{
-        background: #212121;
-        padding-top: 50px;
-        flex-direction: column-reverse;
+        flex-direction: column;
         overflow: initial;
         gap: 50px;
     }
-    .song-container{
-        width: 350px;
-        height: auto;
-        overflow: initial;
+    .left{
+        flex: 2;
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-start;
+        order: 1;
     }
-    .song-container .song .song-img .play-button{
-        color: rgb(16, 104, 206);
-        background: #212121;
-    }    
-    .song-container .song:hover .song-img .play-button{
-        background-color: rgba(16, 104, 206,1);
-        color: #212121;
+    .left .lc{
+        width: 100%;
+        padding: 0 20px;
+        flex-direction: row;
+        overflow-x: scroll;
+        gap: 10px;
     }
-    .song-container .song .song-name{
-        color: #e6e6e6;
+    .left .logo{
+        justify-content: center;
     }
-    .song-container .song .song-artist{
-        color: rgb(141, 141, 141);
+    .left .logo .image{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--primary);
+        overflow: hidden;
+    }
+    .left .logo .text{
+        font-size: 4rem;
+        color: var(--primary);
+    }
+    .left .lc .l-item{
+        width: 60%;
+        background: rgba(0,0,0,0.3);
+        color: var(--secondary);
+        padding: 15px;
+        border-radius: 100px;
+    }
+    .left .lc .l-item.l-active{
+        background: var(--primary);
+        color: var(--bg);    
+
+    }
+    .left .lc .l-item.l-active::after{
+        display: none;
+    }
+    .left .menu .l-title{
+        display: none;
+    }
+    .left .library, .left .general{
+        display: none;
+    }
+    .mid{
+        order: 3;
+    }
+    .right{
+        order: 2;
     }
 }

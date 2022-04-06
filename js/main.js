@@ -1,5 +1,6 @@
+// ADDING ALL THE SONGS TO THE LIST
 
-let songContainer = document.querySelector(".song-container");
+let songContainer = document.querySelector(".mid .song-container");
 
 for(let i=0; i<allMusic.length; i++){
     let songCard = document.createElement("div");
@@ -21,17 +22,33 @@ for(let i=0; i<allMusic.length; i++){
     songContainer.appendChild(songCard);
 }
 
+// MENU SELECTION
+
+let menuItems = document.querySelectorAll(".left .menu .l-item");
+let currentItem = 0;
+
+for(let i=0; i<menuItems.length; i++){
+    menuItems[i].addEventListener("click",function(){
+        menuItems[currentItem].classList.remove("l-active");
+        currentItem = i;
+        menuItems[currentItem].classList.add("l-active");
+    });
+}
+
+
+// MUSIC PLAYER WORKING
+
 let play = document.querySelectorAll(".song .song-img .play-button");
-let playAudio = document.querySelector(".music-player .progress-area .progress-bar #play-audio");
+let playAudio = document.querySelector(".right .music-player .progress-area .progress-bar #play-audio");
 
 let musicIndex = 0, check=0;
 playAudio.src = `./music/${allMusic[musicIndex].src}.mp3`;
 nowPlaying(musicIndex);
 
 
-let prev = document.querySelector(".music-player .controls .prev")
-let playButton = document.querySelector(".music-player .controls .play")
-let next = document.querySelector(".music-player .controls .next")
+let prev = document.querySelector(".right .music-player .controls .prev")
+let playButton = document.querySelector(".right .music-player .controls .play")
+let next = document.querySelector(".right .music-player .controls .next")
 
 for(let i=0; i<play.length; i++){
     play[i].addEventListener("click", function(){
@@ -45,10 +62,9 @@ for(let i=0; i<play.length; i++){
 }
 
 function nowPlaying(){
-    document.querySelector(".music-player").style.backgroundColor = allMusic[musicIndex].bg;
-    document.querySelector(".music-player .play-name").innerHTML = allMusic[musicIndex].name;
-    document.querySelector(".music-player .play-artist").innerHTML = allMusic[musicIndex].artist;
-    document.querySelector(".music-player .play-img img").src = allMusic[musicIndex].img;
+    document.querySelector(".right .music-player .play-name").innerHTML = allMusic[musicIndex].name;
+    document.querySelector(".right .music-player .play-artist").innerHTML = allMusic[musicIndex].artist;
+    document.querySelector(".right .music-player .play-img img").src = allMusic[musicIndex].img;
 }
 
 playButton.addEventListener("click", function(){
@@ -90,8 +106,10 @@ next.addEventListener("click",function(){
     playAudio.play();
 });
 
-progressArea = document.querySelector(".music-player .progress-area"),
-progressBar = progressArea.querySelector(".music-player .progress-area .progress-bar"),
+
+
+progressArea = document.querySelector(".right .music-player .progress-area"),
+progressBar = progressArea.querySelector(".right .music-player .progress-area .progress-bar"),
 
 // update progress bar width according to music current time
 playAudio.addEventListener("timeupdate", (e)=>{

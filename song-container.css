@@ -1,0 +1,106 @@
+.mid .song-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    width: 750px;
+    max-height: 520px;
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+.mid .song-container .song {
+    width: 120px;
+    height: 170px;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.mid .song-container .song .song-img{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    overflow: hidden;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mid .song-container .song .song-img .play-button{
+    position: absolute;
+    cursor: pointer;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    color: var(--primary);
+    background: var(--bg);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.mid .song-container .song .song-img .play-button i{
+    font-size: 0.8rem;
+}
+
+.mid .song-container .song:hover .song-img .play-button{
+    background-color: var(--primary);
+    color: var(--bg);
+}
+
+.mid .song-container .song .song-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.mid .song-container .song .song-name{
+    width: 100px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #eaeaea;
+}
+.mid .song-container .song .song-artist{
+    width: 100px;
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-top: -8px;
+}
+
+
+@media (max-width: 500px){
+    .mid .song-container{
+        width: 350px;
+        height: auto;
+        overflow: initial;
+    }
+    /* }
+    .mid .song-container .song .song-img .play-button{
+        color: var(--primary);
+        background: #212121;
+    }    
+    .mid .song-container .song:hover .song-img .play-button{
+        background-color: rgba(16, 104, 206,1);
+        color: #212121;
+    }
+    .mid .song-container .song .song-name{
+        color: #e6e6e6;
+    }
+    .mid .song-container .song .song-artist{
+        color: rgb(141, 141, 141);
+    } */
+}
