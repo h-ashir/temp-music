@@ -1,3 +1,4 @@
+// ADDING ALL THE SONGS TO THE LIST
 
 let songContainer = document.querySelector(".mid .song-container");
 
@@ -20,6 +21,22 @@ for(let i=0; i<allMusic.length; i++){
     songCard.innerHTML = songDetails;
     songContainer.appendChild(songCard);
 }
+
+// MENU SELECTION
+
+let menuItems = document.querySelectorAll(".left .menu .l-item");
+let currentItem = 0;
+
+for(let i=0; i<menuItems.length; i++){
+    menuItems[i].addEventListener("click",function(){
+        menuItems[currentItem].classList.remove("l-active");
+        currentItem = i;
+        menuItems[currentItem].classList.add("l-active");
+    });
+}
+
+
+// MUSIC PLAYER WORKING
 
 let play = document.querySelectorAll(".song .song-img .play-button");
 let playAudio = document.querySelector(".right .music-player .progress-area .progress-bar #play-audio");
@@ -88,6 +105,8 @@ next.addEventListener("click",function(){
     playButton.innerHTML = `<i class="fas fa-pause"></i>`;
     playAudio.play();
 });
+
+
 
 progressArea = document.querySelector(".right .music-player .progress-area"),
 progressBar = progressArea.querySelector(".right .music-player .progress-area .progress-bar"),
