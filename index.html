@@ -4,49 +4,117 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/fontawesome.min.css">
+    
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="icon" href="./swargam.png">
+    <title>S.W.A.R.G.A.M</title>
 </head>
 <body>
-    <div class="song-container">
-        
+    <div class="left">
+        <div class="lc logo">
+            <div class="image">
+                <img src="./swargam.png" alt="">
+            </div>
+            <div class="text">
+                <span>Swa</span><span>rgam</span>
+            </div>
+        </div>
+        <div class="lc menu">
+            <div class="l-title">Menu</div>
+            <div class="l-item l-active">
+                <i class="fa-solid fa-house"></i>
+                <div class="text">Home</div>
+            </div>
+            <div class="l-item">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="text">Search</div>
+            </div>
+            <div class="l-item">
+                <i class="fa-solid fa-compass"></i>
+                <div class="text">Discover</div>
+            </div>
+            <div class="l-item">
+                <i class="fa-solid fa-compact-disc"></i>
+                <div class="text">Albums</div>
+            </div>
+            <div class="l-item">
+                <i class="fa-solid fa-user-astronaut"></i>
+                <div class="text">Artists</div>
+            </div>
+        </div>
+        <div class="lc library">
+            <div class="l-title">Library</div>
+            <div class="l-item">
+                <i class="fa-solid fa-stopwatch"></i>
+                <div class="text">Recent</div>
+            </div>
+            <div class="l-item">
+                <i class="fa-solid fa-heart"></i>
+                <div class="text">Favorites</div>
+            </div>
+        </div>
+        <div class="lc general">
+            <div class="l-title">General</div>
+            <div class="l-item">
+                <i class="fa-solid fa-gear"></i>
+                <div class="text">Settings</div>
+            </div>
+            <div class="l-item">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <div class="text">Logout</div>
+            </div>
+        </div>
     </div>
+    <div class="mid">
+        <!-- <div class="top"></div>
+        <div class="bottom">
+            <div class="global"></div>
+            <div class="songs"></div>
+            <div class="recently"></div>
+        </div> -->
+        <div class="song-container">
+        </div>
 
-    <div class="music-player">
-      <div class="title">Now Playing</div>
-      <div class="play-img">
-        <img src="" alt="">
-      </div>
-      <div class="play-name"></div>
-      <div class="play-artist"></div>
-      
-      <div class="progress-area">
-          <div class="progress-bar">
-            <audio id="play-audio" src=""></audio>
-          </div>
-          <div class="song-timer">
-            <span class="current-time">0:00</span>
-            <span class="max-duration">0:00</span>
-          </div>
-        </div>
-      
-      <div class="controls">
-        <div class="prev">
-          <i class="fas fa-step-backward"></i>
-        </div>
-        <div class="play">
-          <i class="fas fa-play"></i>
-        </div>
-        <div class="next">
-          <i class="fas fa-step-forward"></i>
-        </div>
-      </div>
     </div>
-    
+    <div class="right">
+        <div class="music-player">
+            <div class="title">Now Playing</div>
+            <div class="play-img">
+              <img src="" alt="">
+            </div>
+            <div class="play-name"></div>
+            <div class="play-artist"></div>
+            
+            <div class="progress-area">
+                <div class="progress-bar">
+                  <audio id="play-audio" src=""></audio>
+                </div>
+                <div class="song-timer">
+                  <span class="current-time">0:00</span>
+                  <span class="max-duration">0:00</span>
+                </div>
+              </div>
+            
+            <div class="controls">
+              <div class="prev">
+                <i class="fas fa-step-backward"></i>
+              </div>
+              <div class="play">
+                <i class="fas fa-play"></i>
+              </div>
+              <div class="next">
+                <i class="fas fa-step-forward"></i>
+              </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/music-list.js"></script>
     <script src="js/main.js"></script>
+
 
 </body>
 </html>
